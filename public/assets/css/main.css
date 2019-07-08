@@ -1,0 +1,61 @@
+html,
+body {
+    width: 100%;
+}
+
+[vue-data],
+[help-name],
+[alert-action] {
+    display: none;
+}
+
+@media (max-width: 1052px) {
+    .table-scrollable .dropdown-menu {
+        position: static !important;
+    }
+}
+@media (min-width: 1053px) {
+    .table-scrollable {
+        overflow: inherit;
+    }
+}
+
+@-webkit-keyframes spinner-border {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-border {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+th,
+td {
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.highcharts-container {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.daterangepicker select {
+    font-size: 14px !important;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #c2cad8;
+    border-radius: 4px;
+}
+
+#select-display .btn-group {
+    width: 100%;
+}
+#select-display .btn {
+    width: 50%;
+}
