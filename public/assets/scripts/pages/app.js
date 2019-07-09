@@ -1,7 +1,6 @@
 var app = new Vue({
     el: "#app",
     data: {
-        container: null,
         user: null,
         token: null
     },
