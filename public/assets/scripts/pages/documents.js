@@ -100,6 +100,8 @@ var documents = new Vue({
 
 $(document).ready(function() {
     sessionStorage.removeItem("document");
-    documents.refresh_documents();
-    scrollTo($(".portlet"));
+    setTimeout(function() {
+        documents.refresh_documents();
+        scrollTo($(".portlet"));
+    }, 1000);
 });

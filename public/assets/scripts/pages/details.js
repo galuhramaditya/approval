@@ -175,5 +175,8 @@ $(document).ready(function() {
     if (!sessionStorage.hasOwnProperty("document")) {
         window.location = "/";
     }
-    details.refresh_document();
+    setTimeout(function() {
+        details.refresh_document();
+        scrollTo($(".portlet"));
+    }, 1000);
 });
