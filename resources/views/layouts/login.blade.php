@@ -43,11 +43,16 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <body class="login">
         <!-- BEGIN LOGIN -->
-        <div class="logo">
-            <h1 class="font-white">{{env("APP_NAME")}}</h1>
-        </div>
-        <div class="content" id="login">
-            @yield('content')
+        <div id="login">    
+            <div class="logo">
+                <h1 class="font-white">{{env("APP_NAME")}}</h1>
+            </div>
+            <div class="content">
+                @yield('content')
+            </div>
+            <div class="logo" style="margin-top: 0">
+                <a href="{{env('HOME')}}" class="btn purple">Home</a>
+            </div>
         </div>
 
         <!-- BEGIN CORE PLUGINS -->
