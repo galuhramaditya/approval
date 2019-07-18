@@ -1,15 +1,15 @@
 var app = new Vue({
     el: "#login",
     data: {
-        cocd: null
+        company: null
     },
     methods: {
-        refresh_cocd: function() {
+        refresh_company: function() {
             $.ajax({
                 type: "post",
                 url: "/company/get",
                 success: function(response) {
-                    app.cocd = response.data;
+                    app.company = response.data;
                 }
             });
         },
@@ -46,6 +46,6 @@ jQuery(document).ready(function() {
     if (localStorage.hasOwnProperty("token")) {
         window.location = "/";
     }
-    app.refresh_cocd();
+    app.refresh_company();
     $("select").focus();
 });

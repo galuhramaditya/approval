@@ -15,11 +15,22 @@
         </a>
         <!-- END RESPONSIVE MENU TOGGLER -->
         <!-- BEGIN TOP NAVIGATION MENU -->
-        <div class="top-menu">
-            <ul class="nav navbar-nav pull-right" vue-data>
+        <div class="top-menu" v-if="user != null">
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown dropdown-user" style="pointer-events: none">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="username">@{{user.conm}}</span>
+                    </a>
+                </li>
+                
+                <li class="dropdown dropdown-user" style="pointer-events: none">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="username">|</span>
+                    </a>
+                </li>
                 <!-- BEGIN USER LOGIN DROPDOWN -->
                 <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                <li class="dropdown dropdown-user" v-if="user != null">
+                <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                         <span class="username">@{{user.name}}</span>
                         <i class="fa fa-angle-down"></i>

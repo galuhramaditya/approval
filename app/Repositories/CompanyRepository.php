@@ -9,6 +9,6 @@ class CompanyRepository implements CompanyRepositoryInterface
 {
     public function get()
     {
-        return Company::pluck("cocd")->all();
+        return Company::all();
     }
 }

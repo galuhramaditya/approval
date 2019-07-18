@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\UserService;
-use App\Traits\ApiResponse;
-use App\Traits\ApiToken;
-use App\Traits\DataLayer;
 use App\Libraries\Validation;
 use App\Libraries\Response;
 use App\Libraries\Token;
@@ -14,11 +11,10 @@ use App\Libraries\Token;
 class UserController extends Controller
 {
     private $userService;
-    use DataLayer;
 
     public function __construct(UserService $userService)
     {
-        $this->userService = $userService;
+        $this->userService      = $userService;
     }
 
     public function login(Request $request)
@@ -35,7 +31,7 @@ class UserController extends Controller
             $token = Token::encode($user);
             return Response::success("login successfully", ["token" => $token]);
         }
-        return Response::error("user does not exist");
+        return Response::error("user does not exist", $user);
     }
 
     public function current(Request $request)

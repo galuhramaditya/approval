@@ -8,4 +8,9 @@ class User extends Model
 {
     protected $table = "samuser";
     protected $hidden = ["Password"];
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class, "cocd", "cocd");
+    }
 }

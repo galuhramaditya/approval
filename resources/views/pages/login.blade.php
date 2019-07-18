@@ -9,7 +9,7 @@
             <label class="control-label visible-ie8 visible-ie9">CoCd</label>
             <select name="cocd" class="form-control">
                 <option value="" selected hidden disabled>Cocd</option>
-                <option v-for="cocd in cocd" :value="cocd">@{{cocd}}</option>
+                <option v-for="comp in company" :value="comp.CoCd">@{{comp.CoCd}}</option>
             </select>
             <div class="help-block text-danger display-hide" help-name="cocd"></div>
         </div>

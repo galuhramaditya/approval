@@ -3,13 +3,11 @@
 namespace App\Services;
 
 use App\Contracts\DocumentRepositoryInterface;
-use App\Traits\DataLayer;
 use App\Exceptions\MessageException;
 
 class DocumentService
 {
     protected $documentRepository;
-    use DataLayer;
 
     public function __construct(DocumentRepositoryInterface $documentRepository)
     {

@@ -23,6 +23,9 @@ class AuthToken
             $user = $this->userService->findOneBy((array) $data);
 
             if ($user) {
+                $user->conm = $user->company->CompAlias;
+                unset($user->company);
+
                 $request->merge(["token" => $user]);
                 return $next($request);
             }
