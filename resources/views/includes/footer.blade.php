@@ -24,7 +24,7 @@
 <script src="/assets/scripts/layouts/quick-nav.min.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 <script>
-    if (!localStorage.hasOwnProperty("token")) {
+    if (!sessionStorage.hasOwnProperty("token")) {
         window.location = "/login";
     }
 </script>
