@@ -25,5 +25,5 @@
 @endsection
 
 @section('scripts')
-    <script src="/assets/scripts/pages/documents.js" type="text/javascript"></script>
+    <script src="assets/scripts/pages/documents.js" type="text/javascript"></script>
 @endsection

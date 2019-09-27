@@ -20,7 +20,7 @@
             </li>
             <!-- END SIDEBAR TOGGLER BUTTON -->
             <li class="nav-item start active">
-                <a href="/" class="nav-link ">
+                <a href="index.php" class="nav-link ">
                     <i class="fa fa-book"></i>
                     <span class="title">Documents</span>
                 </a>

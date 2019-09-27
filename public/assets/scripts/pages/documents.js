@@ -18,7 +18,7 @@ var documents = new Vue({
 
             $.ajax({
                 type: "post",
-                url: "/document/get",
+                url: "document/get",
                 data: {
                     token: app.token,
                     docid: docid,
@@ -61,19 +61,17 @@ var documents = new Vue({
                 "document",
                 JSON.stringify(documents.document.datas[index])
             );
-            window.location = "/details";
+            window.location = "details";
         },
         handle_change_status: function(index, status) {
             var data = documents.document.datas[index];
-            var message = `<b>${
-                data.docid
-            }</b> status will be change to be <b>${status}</b>`;
+            var message = `<b>${data.docid}</b> status will be change to be <b>${status}</b>`;
             bootbox.confirm(message, function(callback) {
                 if (callback) {
                     $.ajax({
                         async: false,
                         type: "patch",
-                        url: "/document/approved",
+                        url: "document/approved",
                         data: {
                             token: app.token,
                             doctype: data.type,

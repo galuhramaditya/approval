@@ -25,7 +25,7 @@ var app = new Vue({
             app.menu = null;
             $.ajax({
                 type: "post",
-                url: "/user/current",
+                url: "user/current",
                 data: {
                     token: app.token
                 },
@@ -42,7 +42,7 @@ var app = new Vue({
         handle_logout: function() {
             sessionStorage.removeItem("token");
             sessionStorage.removeItem("document");
-            window.location = "/login";
+            window.location = "login";
         }
     }
 });

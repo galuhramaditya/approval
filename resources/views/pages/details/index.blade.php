@@ -14,7 +14,7 @@
 @section('breadcrumb')
     <li v-if="details.document != null">
         <i class="fa fa-circle"></i>
-        <a href="/details" vue-data>@{{details.document.docid}}</a>
+        <a href="details" vue-data>@{{details.document.docid}}</a>
     </li>
 @endsection
 
@@ -44,5 +44,5 @@
 @endsection
 
 @section('scripts')
-    <script src="/assets/scripts/pages/details.js" type="text/javascript"></script>
+    <script src="assets/scripts/pages/details.js" type="text/javascript"></script>
 @endsection

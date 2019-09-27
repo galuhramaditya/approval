@@ -7,7 +7,7 @@ var app = new Vue({
         refresh_company: function() {
             $.ajax({
                 type: "post",
-                url: "/company/get",
+                url: "company/get",
                 success: function(response) {
                     app.company = response.data;
                 }
@@ -22,7 +22,7 @@ var app = new Vue({
 
             $.ajax({
                 type: "POST",
-                url: "/user/login",
+                url: "user/login",
                 data: {
                     cocd: cocd,
                     usercd: usercd,
@@ -31,7 +31,7 @@ var app = new Vue({
                 success: function(response) {
                     showAlert("success", response.message);
                     sessionStorage.setItem("token", response.data.token);
-                    window.location = "/";
+                    window.location = "index.php";
                 },
                 error: function(response) {
                     showAlert("error", response.responseJSON.message);
@@ -44,7 +44,7 @@ var app = new Vue({
 
 jQuery(document).ready(function() {
     if (sessionStorage.hasOwnProperty("token")) {
-        window.location = "/";
+        window.location = "index.php";
     }
     app.refresh_company();
     $("select").focus();

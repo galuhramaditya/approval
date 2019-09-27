@@ -47,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="page-bar">
                             <ul class="page-breadcrumb">
                                 <li>
-                                    <a href="/">Documents</a>
+                                    <a href="index.php">Documents</a>
                                 </li>
                                 @yield("breadcrumb")
                             </ul>

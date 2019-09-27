@@ -3,7 +3,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a class="logo-default" style="color: white" href="/">{{env("APP_NAME")}}</a>
+            <a class="logo-default" style="color: white" href="index.php">{{env("APP_NAME")}}</a>
             <div class="menu-toggler sidebar-toggler">
                 <span></span>
             </div>

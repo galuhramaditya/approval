@@ -95,9 +95,9 @@ class DocumentService
         }
 
         if ($data["doctype"] == "RQ") {
-            $get_po_complete = $this->documentRepository->get_po_complete($data["docid"]);
+            $get_po_complete = $this->documentRepository->getPoComplete($data["docid"]);
             if ($get_po_complete) {
-                return $this->callout(false, "has been PO completely");
+                throw new MessageException("has been PO completely");
             }
         }
     }

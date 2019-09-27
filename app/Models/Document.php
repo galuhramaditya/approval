@@ -20,6 +20,7 @@ class Document
                 $join->on("verfy.docid", "=", "hd.docid");
             })
             ->join("samuser as user", function ($join) {
+                $join->on("user.cocd", "=", "hd.cocd");
                 $join->on("user.usercd", "=", "verfy.usercd");
             })
             ->where($where)

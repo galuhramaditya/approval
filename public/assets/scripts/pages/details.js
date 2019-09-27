@@ -29,7 +29,7 @@ var details = new Vue({
 
             $.ajax({
                 type: "post",
-                url: "/document/detail",
+                url: "document/detail",
                 data: {
                     token: app.token,
                     docid: details.document.docid,
@@ -71,16 +71,14 @@ var details = new Vue({
         },
         handle_change_document_status: function(status) {
             var data = details.document;
-            var message = `<b>${
-                data.docid
-            }</b> status will be change to be <b>${status}</b>`;
+            var message = `<b>${data.docid}</b> status will be change to be <b>${status}</b>`;
 
             bootbox.confirm(message, function(callback) {
                 if (callback) {
                     $.ajax({
                         async: false,
                         type: "patch",
-                        url: "/document/approved",
+                        url: "document/approved",
                         data: {
                             token: app.token,
                             doctype: data.type,
@@ -111,7 +109,7 @@ var details = new Vue({
                     $.ajax({
                         async: false,
                         type: "patch",
-                        url: "/document/detail/change-detail-status",
+                        url: "document/detail/change-detail-status",
                         data: {
                             token: app.token,
                             status: status,
@@ -141,7 +139,7 @@ var details = new Vue({
 
             $.ajax({
                 type: "patch",
-                url: "/document/detail/update-qtyapprove",
+                url: "document/detail/update-qtyapprove",
                 data: {
                     token: app.token,
                     docid: details.document.docid,
@@ -173,7 +171,7 @@ var details = new Vue({
 
 $(document).ready(function() {
     if (!sessionStorage.hasOwnProperty("document")) {
-        window.location = "/";
+        window.location = "index.php";
     }
     setTimeout(function() {
         details.refresh_document();

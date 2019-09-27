@@ -24,19 +24,19 @@ License: You must have a valid license purchased only from themeforest(the above
         <title>{{env("APP_NAME")}} | Login</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="{{env("APP_NAME")}}" name="description" />
+        <meta content="{{ env('APP_NAME') }}" name="description" />
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="/assets/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="/assets/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="assets/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN PAGE LEVEL STYLES -->
-        <link href="/assets/css/login.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/login.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
@@ -45,26 +45,26 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN LOGIN -->
         <div id="login">    
             <div class="logo">
-                <h1 class="font-white">{{env("APP_NAME")}}</h1>
+                <h1 class="font-white">{{ env("APP_NAME") }}</h1>
             </div>
             <div class="content">
                 @yield('content')
             </div>
             <div class="logo" style="margin-top: 0">
-                <a href="{{env('HOME')}}" class="btn purple">Home</a>
+                <a :href="document.location.pathname.split('/').length < 3 ? '{{ env('HOME_VHOST') }}' : '{{ env('HOME_HTDOCS') }}'" class="btn purple">Home</a>
             </div>
         </div>
 
         <!-- BEGIN CORE PLUGINS -->
-        <script src="/assets/scripts/global/jquery.min.js" type="text/javascript"></script>
-        <script src="/assets/scripts/global/bootstrap.min.js" type="text/javascript"></script>
-        <script src="/assets/scripts/global/vue.min.js" type="text/javascript"></script>
+        <script src="assets/scripts/global/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/scripts/global/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/scripts/global/vue.min.js" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
-        <script src="/assets/scripts/global/main.js" type="text/javascript"></script>
+        <script src="assets/scripts/global/main.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script src="/assets/scripts/pages/login.js" type="text/javascript"></script>
+        <script src="assets/scripts/pages/login.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
     </body>
 
