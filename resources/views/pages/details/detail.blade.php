@@ -7,10 +7,10 @@
     </div>
     <div class="portlet-body">
         <div class="table-toolbar" style="margin-bottom: 10">
-                <div class="row">
-                    <form class="col-sm-6" v-on:submit.prevent="details.refresh_detail_datas()">
-                        <div class="btn-group" style="width: 78%">
-                                <div class="input-group">
+            <div class="row">
+                <form class="col-sm-6" v-on:submit.prevent="details.refresh_detail_datas()">
+                    <div class="btn-group" style="width: 78%">
+                        <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-search"></i>
                             </span>
@@ -116,13 +116,13 @@
             </div>
             <div class="col-md-6" v-if="details.detail.lastPage > 1">
                 <div class="btn-group pull-right">
-                    <button class="btn sbold" v-on:click.prevent="details.refresh_detail_prev()">
+                    <button class="btn sbold" v-on:click.prevent="details.handle_detail_prev()">
                         <i class="fa fa-chevron-left"></i>
                     </button>
-                    <button class="btn sbold" v-on:click.prevent="scrollTo($('#details'))">
+                    <button class="btn sbold" v-on:click.prevent="scrollTo($('#details'))" :title="`Until ${details.detail.lastPage}`">
                         <b>@{{details.detail.pagination}}</b>
                     </button>
-                    <button class="btn sbold" v-on:click.prevent="details.refresh_detail_next()">
+                    <button class="btn sbold" v-on:click.prevent="details.handle_detail_next()">
                         <i class="fa fa-chevron-right"></i>
                     </button>
                 </div>

@@ -16,55 +16,56 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
-    <!--<![endif]-->
-    <!-- BEGIN HEAD -->
-    <head>
-        @include("includes.header")
-        @yield('css')
-    </head>
-    <!-- END HEAD -->
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
 
-    <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
-        <div class="page-wrapper" id="app">
-            <!-- BEGIN HEADER -->
-            @include("includes.navigation")
-            <!-- END HEADER -->
-            <!-- BEGIN HEADER & CONTENT DIVIDER -->
-            <div class="clearfix"> </div>
-            <!-- END HEADER & CONTENT DIVIDER -->
-            <!-- BEGIN CONTAINER -->
-            <div class="page-container">
-                <!-- BEGIN SIDEBAR -->
-                @include('includes.sidebar')
-                <!-- END SIDEBAR -->
-                <!-- BEGIN CONTENT -->
-                <div class="page-content-wrapper">
-                    <!-- BEGIN CONTENT BODY -->
-                    <div class="page-content">
-                        <!-- BEGIN PAGE HEADER-->
-            
-                        <!-- BEGIN PAGE BAR -->
-                        <div class="page-bar">
-                            <ul class="page-breadcrumb">
-                                <li>
-                                    <a href="index.php">Documents</a>
-                                </li>
-                                @yield("breadcrumb")
-                            </ul>
-                            <div class="page-toolbar">
-                                @yield("toolbar")
-                            </div>
+<head>
+    @include("includes.header")
+    @yield('css')
+</head>
+<!-- END HEAD -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
+    <div class="page-wrapper" id="app">
+        <!-- BEGIN HEADER -->
+        @include("includes.navigation")
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            @include('includes.sidebar')
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <!-- BEGIN PAGE HEADER-->
+
+                    <!-- BEGIN PAGE BAR -->
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <a :href="url('/')">Documents</a>
+                            </li>
+                            @yield("breadcrumb")
+                        </ul>
+                        <div class="page-toolbar">
+                            @yield("toolbar")
                         </div>
-                        <!-- END PAGE BAR -->
-                        @yield("content")
                     </div>
-                    <!-- END CONTENT BODY -->
+                    <!-- END PAGE BAR -->
+                    @yield("content")
                 </div>
-                <!-- END CONTENT -->
+                <!-- END CONTENT BODY -->
             </div>
-            <!-- END CONTAINER -->
+            <!-- END CONTENT -->
         </div>
-        @include("includes.footer")
-    </body>
+        <!-- END CONTAINER -->
+    </div>
+    @include("includes.footer")
+</body>
 
 </html>

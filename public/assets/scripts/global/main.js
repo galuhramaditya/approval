@@ -84,3 +84,17 @@ get_endDate = function(selector, format) {
         .data("daterangepicker")
         .endDate.format(format);
 };
+
+// is vhost
+isVHost = function(yes, no) {
+    return document.location.pathname.split("/").length < 3 ? yes : no;
+};
+
+// init url
+initURL = function(path, vHost, notVHost) {
+    while (path[0] == "/") {
+        path = path.slice(1);
+    }
+
+    return isVHost(`${vHost}/${path}`, `${notVHost}/${path}`);
+};

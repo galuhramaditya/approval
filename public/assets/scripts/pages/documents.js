@@ -18,7 +18,7 @@ var documents = new Vue({
 
             $.ajax({
                 type: "post",
-                url: "document/get",
+                url: url("/document/get"),
                 data: {
                     token: app.token,
                     docid: docid,
@@ -61,7 +61,7 @@ var documents = new Vue({
                 "document",
                 JSON.stringify(documents.document.datas[index])
             );
-            window.location = "details";
+            window.location = url("/details");
         },
         handle_change_status: function(index, status) {
             var data = documents.document.datas[index];
@@ -71,7 +71,7 @@ var documents = new Vue({
                     $.ajax({
                         async: false,
                         type: "patch",
-                        url: "document/approved",
+                        url: url("/document/approved"),
                         data: {
                             token: app.token,
                             doctype: data.type,

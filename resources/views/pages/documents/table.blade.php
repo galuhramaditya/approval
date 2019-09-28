@@ -63,7 +63,7 @@
                         <button class="btn sbold" v-on:click.prevent="documents.refresh_document_prev()">
                             <i class="fa fa-chevron-left"></i>
                         </button>
-                        <button class="btn sbold" v-on:click.prevent="scrollTo($('.portlet'))">
+                        <button class="btn sbold" v-on:click.prevent="scrollTo($('.portlet'))" :title="`Until ${documents.document.lastPage}`">
                             <b>@{{documents.document.pagination}}</b>
                         </button>
                         <button class="btn sbold" v-on:click.prevent="documents.refresh_document_next()">

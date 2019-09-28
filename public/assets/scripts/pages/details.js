@@ -29,7 +29,7 @@ var details = new Vue({
 
             $.ajax({
                 type: "post",
-                url: "document/detail",
+                url: url("/document/detail"),
                 data: {
                     token: app.token,
                     docid: details.document.docid,
@@ -56,15 +56,15 @@ var details = new Vue({
             scrollTo($("#details"));
         },
         handle_detail_prev: function() {
-            if (app.detail.pagination > 1) {
-                app.detail.pagination--;
+            if (details.detail.pagination > 1) {
+                details.detail.pagination--;
             }
             details.refresh_details();
             scrollTo($("#details"));
         },
         handle_detail_next: function() {
-            if (app.detail.pagination < app.detail.lastPage) {
-                app.detail.pagination++;
+            if (details.detail.pagination < details.detail.lastPage) {
+                details.detail.pagination++;
             }
             details.refresh_details();
             scrollTo($("#details"));
@@ -78,7 +78,7 @@ var details = new Vue({
                     $.ajax({
                         async: false,
                         type: "patch",
-                        url: "document/approved",
+                        url: url("/document/approved"),
                         data: {
                             token: app.token,
                             doctype: data.type,
@@ -109,7 +109,7 @@ var details = new Vue({
                     $.ajax({
                         async: false,
                         type: "patch",
-                        url: "document/detail/change-detail-status",
+                        url: url("/document/detail/change-detail-status"),
                         data: {
                             token: app.token,
                             status: status,
@@ -139,7 +139,7 @@ var details = new Vue({
 
             $.ajax({
                 type: "patch",
-                url: "document/detail/update-qtyapprove",
+                url: url("/document/detail/update-qtyapprove"),
                 data: {
                     token: app.token,
                     docid: details.document.docid,
@@ -171,7 +171,7 @@ var details = new Vue({
 
 $(document).ready(function() {
     if (!sessionStorage.hasOwnProperty("document")) {
-        window.location = "index.php";
+        window.location = url("/");
     }
     setTimeout(function() {
         details.refresh_document();
