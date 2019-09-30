@@ -18,6 +18,6 @@
 <link href="{{ url('assets/css/darkblue.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
 <link href="{{ url('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- END THEME LAYOUT STYLES -->
-<link rel="shortcut icon" href="favicon.ico" />
+<!-- <link rel="shortcut icon" href="favicon.ico" /> -->
 <link href="{{ url('assets/css/main.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ url('assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
