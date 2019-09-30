@@ -10,7 +10,7 @@ var app = new Vue({
         }
     },
     watch: {
-        token: function() {
+        async token() {
             app.refresh_user();
         }
     },

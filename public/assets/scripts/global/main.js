@@ -85,9 +85,6 @@ get_endDate = function(selector, format) {
         .endDate.format(format);
 };
 
-// is vhost
-isVHost = document.location.pathname.split("/").length < 3;
-
 // init url
 initURL = function(path, host) {
     while (path[0] == "/") {

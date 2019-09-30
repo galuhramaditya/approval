@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END THEME GLOBAL SCRIPTS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script>
-        function url(path) {
+        function url(path = "") {
             return initURL(path, '<?= url() ?>')
         }
     </script>

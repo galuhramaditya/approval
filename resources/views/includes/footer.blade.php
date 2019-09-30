@@ -25,20 +25,19 @@
 <!-- END THEME LAYOUT SCRIPTS -->
 <script src="{{ url('assets/scripts/global/main.js') }}" type="text/javascript"></script>
 <script>
-    function url(path) {
+    function url(path = "") {
         return initURL(path, '<?= url() ?>')
     }
 
     if (!sessionStorage.hasOwnProperty("token")) {
         window.location = url("/login");
     }
-</script>
-<script src="{{ url('assets/scripts/pages/app.js') }}" type="text/javascript"></script>
-<script>
+
     $(document).ready(function() {
         $('#clickmewow').click(function() {
             $('#radio1003').attr('checked', 'checked');
         });
     })
 </script>
+<script src="{{ url('assets/scripts/pages/app.js') }}" type="text/javascript"></script>
 @yield('scripts')
