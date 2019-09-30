@@ -86,15 +86,13 @@ get_endDate = function(selector, format) {
 };
 
 // is vhost
-isVHost = function(yes, no) {
-    return document.location.pathname.split("/").length < 3 ? yes : no;
-};
+isVHost = document.location.pathname.split("/").length < 3;
 
 // init url
-initURL = function(path, vHost, notVHost) {
+initURL = function(path, host) {
     while (path[0] == "/") {
         path = path.slice(1);
     }
 
-    return isVHost(`${vHost}/${path}`, `${notVHost}/${path}`);
+    return `${host}/${path}`;
 };

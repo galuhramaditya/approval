@@ -26,7 +26,7 @@
 <script src="{{ url('assets/scripts/global/main.js') }}" type="text/javascript"></script>
 <script>
     function url(path) {
-        return initURL(path, null, '<?= env("APP_URL") ?>')
+        return initURL(path, '<?= url() ?>')
     }
 
     if (!sessionStorage.hasOwnProperty("token")) {

@@ -52,7 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
             @yield('content')
         </div>
         <div class="logo" style="margin-top: 0">
-            <a :href="isVHost('{{ env('HOME_VHOST') }}', '{{ env('HOME_HTDOCS') }}')" class="btn purple">Home</a>
+            <a :href="'<?= url() ?>'.split('/').length == 3 ? '{{ env('HOME_VHOST') }}' : '{{ env('HOME_HTDOCS') }}'" class="btn purple">Home</a>
         </div>
     </div>
 
@@ -67,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script>
         function url(path) {
-            return initURL(path, null, '<?= env("APP_URL") ?>')
+            return initURL(path, '<?= url() ?>')
         }
     </script>
     <script src="{{ url('assets/scripts/pages/login.js') }}" type="text/javascript"></script>
