@@ -1,11 +1,11 @@
 <div class="col-md-12" vue-data>
     <div class="portlet light bordered">
-        <div class="portlet-title">
-            <div class="caption font-dark">
-                <i class="icon-docs font-dark"></i>
-                <span class="caption-subject bold uppercase"> demand datas </span>
-            </div>
-        </div>
+        <!-- <div class="portlet-title"> -->
+        <!-- <div class="caption font-dark"> -->
+        <!-- <i class="fa fa-file-o font-dark"></i> -->
+        <!-- <span class="caption-subject bold uppercase"> demand datas </span> -->
+        <!-- </div> -->
+        <!-- </div> -->
         <div class="portlet-body" v-if="documents.document != null">
             @include("pages.documents.filter")
             @include("includes.alert")

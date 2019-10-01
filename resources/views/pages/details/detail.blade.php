@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption font-dark">
             <i class="icon-docs font-dark"></i>
-            <span class="caption-subject bold uppercase"> detail datas </span>
+            <span class="caption-subject bold uppercase"> detail data </span>
         </div>
     </div>
     <div class="portlet-body">
