@@ -15,6 +15,18 @@ class UserService
 
     public function findOneBy(array $data)
     {
-        return $this->userRepository->findOneBy($data);
+        if (array_key_exists("password", $data)) {
+            $password = $data["password"];
+            unset($data["password"]);
+        }
+
+        $find = $this->userRepository->findOneBy($data);
+
+        if (isset($password) && $find->password != $password) {
+            return null;
+        }
+
+        unset($find->password);
+        return $find;
     }
 }
